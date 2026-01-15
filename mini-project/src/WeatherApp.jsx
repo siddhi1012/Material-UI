@@ -12,15 +12,15 @@ export default function WeatherApp() {
         weather: " Rainy"
     })
 
-    let updateInfo = (result) =>{
-        serWeatherInfo(result);
+    let updateInfo = (newInfo) =>{
+        serWeatherInfo(newInfo);
 
     }
 
     return (
         <div style={{ textAlign: "center" }}>
             <h1>Weather App by: Siddhi Gavhane</h1>
-            <SearchBox />
+            <SearchBox updateInfo={updateInfo}/>
             <InfoBox info={weatherInfo}/>
         </div>
     )
