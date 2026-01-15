@@ -12,6 +12,7 @@ export default function SearchBox() {
         let jsonResponse = await response.json();
         // console.log(jsonResponse);
         let result = {
+            city: city,
             temp: jsonResponse.main.temp,
             tempMin: jsonResponse.main.temp_min,
             tempMax: jsonResponse.main.temp_max,
@@ -38,8 +39,8 @@ export default function SearchBox() {
     }
 
     return (
-        <div className='SearchBox'>
-            <h3>Search for the Weather</h3>
+        <div className='SearchBox' style={{marginBottom:"25px"}}>
+            {/* <h3>Search for the Weather</h3> */}
             <form onSubmit={handleSubmit}>
                 <TextField id="city"
                     value={city}
